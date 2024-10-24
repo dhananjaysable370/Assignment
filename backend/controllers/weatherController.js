@@ -3,7 +3,7 @@ const Weather = require('../models/WeatherModel');
 
 const fetchWeatherData = async (req, res) => {
     const { city } = req.body;
-    const apiKey = process.env.OPENWEATHER_API_KEY;
+    const apiKey = process.env.API_KEY;
     const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
     const data = response.data;
 
